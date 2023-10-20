@@ -1,0 +1,38 @@
+.offers {
+  background: linear-gradient(
+    to right,
+    rgba(218, 19, 19, 0.5),
+    rgba(255, 91, 247, 0.5)
+  );
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.offers img {
+  width: 30vh;
+  height: 30vh;
+  object-fit: cover;
+}
+
+.offers button {
+  background-color: #e54343;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 45px;
+  font-size: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.offers button:hover {
+  transform: scale(1.1);
+}
+
+.offers button:active {
+  transform: scale(1);
+}
