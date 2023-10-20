@@ -1,0 +1,31 @@
+.new-collections {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.new-collections-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff4b;
+  padding: 20px;
+}
+
+.new-collections-item {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin: 18px;
+  height: 300px;
+  background-color: #7c323260;
+  padding: 10px 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.new-collections-item .description {
+  padding: 0 10px;
+}
