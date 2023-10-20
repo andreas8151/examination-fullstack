@@ -38,12 +38,4 @@ export let data_products = [
       "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     price: 49.99,
   },
-  {
-    id: 6,
-    name: "Product 6",
-    image: "https://picsum.photos/200",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    price: 59.99,
-  },
 ];
