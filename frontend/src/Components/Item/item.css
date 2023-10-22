@@ -1,0 +1,29 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 20px 0;
+}
+
+.item:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+
+.item:active {
+  transform: scale(0.98);
+}
+
+.item .description {
+  padding: 0 10px;
+}
+
+.item img {
+  height: 300px;
+  width: 200px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+}
