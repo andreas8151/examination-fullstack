@@ -7,7 +7,15 @@ export const Hero = () => {
     <div className="hero">
       <img src={hero} className="hero-img"></img>
       <div className="hero-latest-btn">
-        <button> latest Collection</button>
+        <button
+          onClick={() => {
+            const newCollection = document.getElementById("new-collections");
+            newCollection.scrollIntoView({ behavior: "smooth" });
+          }}
+        >
+          {" "}
+          latest Collection
+        </button>
       </div>
     </div>
   );
