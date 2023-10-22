@@ -72,3 +72,35 @@ a {
   text-decoration: none;
   color: #000;
 }
+
+.navbar img {
+  width: 130px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 20px 0 20px;
+  }
+
+  .nav-menu {
+    display: none;
+    padding: 0;
+  }
+
+  .nav-login {
+    display: none;
+  }
+
+  .nav-cart {
+    display: none;
+  }
+
+  .nav-cart-count {
+    display: none;
+  }
+
+  .navbar img {
+    display: none;
+  }
+}
