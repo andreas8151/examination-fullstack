@@ -1,0 +1,76 @@
+.loginSignup {
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    to right,
+    rgba(218, 19, 19, 0.5),
+    rgba(255, 91, 247, 0.5)
+  );
+}
+
+.signIn-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 1000px;
+  height: 500px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.loginSignup h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.loginSignup form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  margin-right: 40px;
+}
+
+.loginSignup form input {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid rgb(204, 204, 204);
+  background-color: rgb(248, 248, 248);
+  border-radius: 5px;
+}
+
+.loginSignup form button {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 50px;
+  background-color: #59ae4d;
+  color: #ffffff;
+  font-size: large;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.loginSignup form button:hover {
+  background-color: #48903f;
+}
+
+.loginSignup form button:active {
+  transform: scale(0.97);
+}
+
+.loginSignup img {
+  width: 50%;
+}
+
+.loginSignup a {
+  text-decoration: none;
+  color: #c3404b;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
