@@ -20,23 +20,3 @@
   background-color: #ffffff4b;
   padding: 20px;
 }
-
-.popular-item {
-  display: flex;
-  flex-direction: column;
-  width: 200px;
-  border-radius: 5px;
-  padding: 10px;
-}
-
-.popular-item:hover {
-  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
-}
-
-.popular-item:active {
-  transform: scale(0.98);
-}
-
-.popular-item .description {
-  padding: 0 10px;
-}
