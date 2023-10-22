@@ -2,6 +2,7 @@ import React from "react";
 import "./CSS/shopCategory.css";
 import { ShopContext } from "../Context/ShopContext";
 import { useContext } from "react";
+import { Item } from "../Components/Item/Item";
 
 export const ShopCategory = (props) => {
   const { all_data } = useContext(ShopContext);
@@ -14,13 +15,14 @@ export const ShopCategory = (props) => {
       <div className="shop-category-products">
         {all_data.map((product) => {
           if (product.category === props.category) {
-            console.log(product);
             return (
-              <div className="product-card" key={product.id}>
-                <img src={product.image} alt="product" />
-                <h3>{product.name}</h3>
-                <p>${product.price}</p>
-              </div>
+              <Item
+                key={product.id}
+                id={product.id}
+                image={product.image}
+                name={product.name}
+                price={product.price}
+              />
             );
           }
           return null;
