@@ -1,4 +1,3 @@
-import men from "./man.png";
 export let all_data = [
   {
     id: 1,
