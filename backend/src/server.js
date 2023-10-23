@@ -30,8 +30,11 @@ const { productRouter } = require("./routes/product/product");
 
 const { adminRouter } = require("./routes/admin/admin");
 
+const { orderRouter } = require("./routes/order/order");
+
 app.use("/product", productRouter);
 app.use("/admin", adminRouter);
+app.use("/order", orderRouter);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
