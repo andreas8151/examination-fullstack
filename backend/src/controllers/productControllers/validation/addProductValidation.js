@@ -8,7 +8,6 @@ const productScheme = joi.object({
   category: joi.string().min(3).max(30).required(),
 });
 
-// Validation functions
 function addProductValidation({ name, image, description, price, category }) {
   const result = productScheme.validate({
     name,
