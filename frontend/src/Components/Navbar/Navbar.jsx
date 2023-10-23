@@ -1,11 +1,11 @@
 import React from "react";
 import "./navbar.css";
-import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../Assets/logo.png";
 import { ShopContext } from "../../Context/ShopContext";
 import { useContext } from "react";
+import { GrCart } from "react-icons/gr";
 
 export const Navbar = () => {
   const [menu, setMenu] = useState("Shop");
@@ -58,7 +58,7 @@ export const Navbar = () => {
         </Link>
 
         <Link to="/cart" className="nav-cart">
-          <AiOutlineShoppingCart />
+          <GrCart />
         </Link>
         <div className="nav-cart-count">{getTotalItemsCount()}</div>
       </div>
