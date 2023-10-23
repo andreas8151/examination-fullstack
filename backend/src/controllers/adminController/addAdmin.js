@@ -1,4 +1,5 @@
 const pool = require("../../server");
+const bcrypt = require("bcrypt");
 
 const { adminValidation } = require("./validation/adminValidation");
 
@@ -12,9 +13,11 @@ function addAdmin(req, res) {
 
   const { email, password } = value;
 
+  const cryptoPassword = bcrypt.hashSync(password, 10);
+
   const sql = "INSERT INTO admins ( email, password) VALUES ( ?, ?)";
 
-  pool.execute(sql, [email, password], (err, result) => {
+  pool.execute(sql, [email, cryptoPassword], (err, result) => {
     if (err) {
       res.status(500).send("Error in server" + err);
       return;
