@@ -28,7 +28,10 @@ module.exports = pool;
 
 const { productRouter } = require("./routes/product/product");
 
+const { adminRouter } = require("./routes/admin/admin");
+
 app.use("/product", productRouter);
+app.use("/admin", adminRouter);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
