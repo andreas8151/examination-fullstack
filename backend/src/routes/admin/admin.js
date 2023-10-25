@@ -12,9 +12,12 @@ const {
   deleteAdmin,
 } = require("../../controllers/adminController/deleteAdmin");
 
+const { login } = require("../../controllers/adminController/login");
+
 adminRouter.get("/", getAdmins);
 adminRouter.post("/", addAdmin);
 adminRouter.patch("/:id", patchAdmin);
 adminRouter.delete("/:id", deleteAdmin);
+adminRouter.post("/login", login);
 
 module.exports = { adminRouter };
