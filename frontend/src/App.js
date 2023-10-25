@@ -10,6 +10,8 @@ import { Footer } from "./Components/Footer/Footer";
 import men_banner from "./Components/Assets/men.png";
 import woman_banner from "./Components/Assets/women.png";
 import kids_banner from "./Components/Assets/kids.png";
+import { Admin } from "./Pages/Admin";
+import { AdminUpdateItem } from "./Pages/AdminUpdateItem";
 
 function App() {
   return (
@@ -34,6 +36,8 @@ function App() {
           <Route path="/product/:productId" element={<Product />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<LoginSignup />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/admin/:productId" element={<AdminUpdateItem />} />
         </Routes>
       </BrowserRouter>
       <Footer />
