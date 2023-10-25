@@ -1,0 +1,29 @@
+.order-container {
+  display: flex;
+  flex-direction: column;
+  background-color: antiquewhite;
+  overflow: auto;
+  height: 80vh;
+  margin: 40px;
+  padding: 0 10px;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+
+.order-container button {
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  font-size: large;
+  padding: 5px 9px;
+  border-radius: 5%;
+  cursor: pointer;
+  margin-right: 1rem;
+  margin: 1rem 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.order-container button:hover {
+  background-color: #1a1a1ac6;
+}
