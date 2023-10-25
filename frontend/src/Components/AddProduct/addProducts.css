@@ -1,0 +1,41 @@
+.add-product-container {
+  background-color: rgba(117, 79, 166, 0.191);
+  width: 300px;
+  height: 75vh;
+  border-radius: 5px;
+  padding: 0 2rem;
+  height: 80vh;
+  margin: 40px 0;
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+
+.add-product-container input {
+  display: flex;
+  width: 290px;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-product-container label {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.add-product-container button {
+  background-color: #1a9f32;
+  color: #fff;
+  border: none;
+  font-size: large;
+  padding: 5px 9px;
+  border-radius: 5%;
+  cursor: pointer;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.add-product-container button:hover {
+  background-color: #16862b;
+}
