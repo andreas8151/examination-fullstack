@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./relatedProducts.css";
-import { all_data } from "../Assets/all-data";
+import { ShopContext } from "../../Context/ShopContext";
 import { Item } from "../Item/Item";
 
 export const RelatedProducts = (props) => {
   const { category } = props;
+  const { all_data } = useContext(ShopContext);
 
   const filtered_products = all_data
     .filter((item) => item.category === category.category)
