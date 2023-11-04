@@ -3,11 +3,13 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
   width: 300px;
   height: 250px;
-  background-color: #99bad981;
   margin: 10px;
   padding: 48px;
+
+  background-color: #99bad981;
   border-radius: 5px;
 }
 
@@ -15,11 +17,12 @@
   width: 100%;
   margin: 5px;
   padding: 4px;
-  border-radius: 5px;
+
   font-size: large;
 
   border: none;
   background-color: rgb(255, 255, 255);
+  border-radius: 5px;
 }
 
 .productInputs button {
@@ -27,14 +30,4 @@
   color: rgb(255, 255, 255);
   border-radius: 5px;
   border: none;
-  padding: 5px;
-  margin: 10px;
-  font-size: large;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-}
-
-.productInputs button:hover {
-  background-color: rgb(54, 147, 58);
-  transform: scale(1.1);
 }

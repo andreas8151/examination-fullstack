@@ -10,14 +10,17 @@
   align-items: center;
   justify-content: center;
   justify-content: space-evenly;
+
   padding: 20px;
   margin: 40px;
+
   border-radius: 10px;
 }
 
 .offers img {
   width: 30vh;
   height: 30vh;
+
   object-fit: cover;
 }
 
@@ -26,16 +29,6 @@
   color: #fff;
   border: none;
   border-radius: 30px;
+
   padding: 10px 45px;
-  font-size: 30px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.offers button:hover {
-  transform: scale(1.1);
-}
-
-.offers button:active {
-  transform: scale(1);
 }

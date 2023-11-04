@@ -9,6 +9,7 @@
   height: 100px;
   width: 300px;
   margin: 20px 0 0 0;
+
   object-fit: cover;
 }
 
@@ -17,6 +18,8 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff4b;
+
   padding: 20px;
+
+  background-color: #ffffff4b;
 }

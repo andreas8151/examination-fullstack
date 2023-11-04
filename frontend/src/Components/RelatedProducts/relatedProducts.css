@@ -1,10 +1,12 @@
 .relatedProducts {
+  padding: 20px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   background-color: #ffffff4b;
-  padding: 20px;
 }
 
 .relatedProducts h1 {
@@ -12,17 +14,20 @@
 }
 
 .relatedProducts hr {
-  width: 190px;
   margin: 20px 0;
-  background-color: black;
+  width: 190px;
   height: 2px;
+
+  background-color: black;
 }
 
 .relatedProducts-items {
+  padding: 20px;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+
   background-color: #ffffff4b;
-  padding: 20px;
 }

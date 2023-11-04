@@ -2,15 +2,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(
-    90deg,
-    rgb(156, 221, 147) 0%,
-
-    rgba(71, 180, 199, 1) 100%
-  );
   margin: 40px;
   border-radius: 10px;
   color: #fff;
+  background: linear-gradient(
+    90deg,
+    rgb(156, 221, 147) 0%,
+    rgba(71, 180, 199, 1) 100%
+  );
 }
 
 .news-letter {
@@ -22,18 +21,18 @@
   width: 300px;
   padding: 10px;
   margin: 10px;
-  border-radius: 5px;
   border: none;
+  border-radius: 5px;
 }
 
 .news-letter-input button {
   width: 200px;
   padding: 10px;
-  border-radius: 5px;
   border: none;
+  border-radius: 5px;
   background: #27607fb3;
-  font-size: large;
   color: #fff;
+  font-size: large;
   cursor: pointer;
 }
 
@@ -65,9 +64,6 @@
   .news-container {
     flex-direction: column;
     padding: 50px;
-  }
-
-  .news-container input {
   }
 
   .news-img {
