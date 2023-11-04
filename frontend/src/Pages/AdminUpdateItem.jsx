@@ -9,6 +9,10 @@ export const AdminUpdateItem = () => {
   const { productId } = useParams();
   const product = all_data.find((item) => item.id == productId);
 
+  if (!product) {
+    return <div>Product not found</div>;
+  }
+
   return (
     <div>
       <UpdateItem product={product} />
