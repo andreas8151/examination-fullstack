@@ -9,7 +9,6 @@ export const Product = () => {
   const { all_data } = useContext(ShopContext);
   const { productId } = useParams();
   const product = all_data.find((item) => item.id == productId);
-  console.log(product);
 
   if (!product) {
     return <div>Product not found</div>;
