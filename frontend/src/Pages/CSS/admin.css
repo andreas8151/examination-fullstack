@@ -1,0 +1,13 @@
+hr {
+  border: 1px solid #4e94e5;
+  margin-bottom: 25px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+}
+
+.container {
+  display: flex;
+}
