@@ -1,0 +1,35 @@
+.productInputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  height: 250px;
+  border: 1px solid black;
+  margin: 10px;
+  padding: 48px;
+  border-radius: 5px;
+}
+
+.productInputs input {
+  width: 100%;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.productInputs button {
+  background-color: antiquewhite;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 10px;
+  font-size: large;
+}
+
+.productInputs button:hover {
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
