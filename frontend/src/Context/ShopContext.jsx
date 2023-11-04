@@ -1,20 +1,33 @@
-import React, { createContext } from "react";
-import { all_data } from "../Components/Assets/all-data";
-import { useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
 
 export const ShopContext = createContext(null);
 
-const getDefaultCart = () => {
-  let cart = {};
-
-  all_data.forEach((item) => {
-    cart[item.id] = 0;
-  });
-  return cart;
-};
-
 export const ShopContextProvider = (props) => {
-  const [cart, setCart] = useState(getDefaultCart());
+  const [cart, setCart] = useState({});
+  const [all_data, setAllData] = useState([]);
+
+  useEffect(() => {
+    async function getAllData() {
+      let response = await fetch("http://localhost:5050/product/");
+      let data = await response.json();
+      setAllData(data);
+    }
+    getAllData();
+  }, []);
+
+  useEffect(() => {
+    if (all_data.length > 0) {
+      setCart(getDefaultCart());
+    }
+  }, [all_data]);
+
+  const getDefaultCart = () => {
+    let defaultCart = {};
+    for (let i = 0; i < all_data.length; i++) {
+      defaultCart[all_data[i].id] = 0;
+    }
+    return defaultCart;
+  };
 
   const getTotalItemsCount = () => {
     let total = 0;
