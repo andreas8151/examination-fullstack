@@ -1,12 +1,13 @@
 import React from "react";
 import "./cartItems.css";
-import { ShopContext } from "../../Context/ShopContext";
-import { useContext } from "react";
 
-export const CartItems = () => {
-  const { all_data, cart, removeFromCart, addToCart, emptyCart } =
-    useContext(ShopContext);
-
+export const CartItems = ({
+  all_data,
+  cart,
+  removeFromCart,
+  addToCart,
+  emptyCart,
+}) => {
   let total = 0;
 
   for (let i = 0; i < all_data.length; i++) {
@@ -37,19 +38,14 @@ export const CartItems = () => {
                 <div className="cartItems-quantity">
                   <button
                     className="add-item"
-                    onClick={() => {
-                      addToCart(product.id);
-                    }}
+                    onClick={() => addToCart(product.id)}
                   >
                     +
                   </button>
                   <p>{cart[product.id]}</p>
-
                   <button
                     className="remove-item"
-                    onClick={() => {
-                      removeFromCart(product.id);
-                    }}
+                    onClick={() => removeFromCart(product.id)}
                   >
                     -
                   </button>
@@ -61,31 +57,14 @@ export const CartItems = () => {
         return null;
       })}
 
-      <div className="card-checkout">
-        <h3>Checkout</h3>
-
-        <p className="total-price">Total: ${total.toFixed(2)}</p>
-        <button className="checkout-button">Checkout</button>
-      </div>
-      <div className="double-btn">
-        <button
-          onClick={() => {
-            window.location.href = "/";
-          }}
-          className="continue-shopping"
-        >
-          Continue Shopping
-        </button>
-
-        <button
-          onClick={() => {
-            emptyCart();
-          }}
-          className="empty-cart"
-        >
+      <div className="cartItems-total">
+        <h3>Total: ${total.toFixed(2)}</h3>
+        <button className="empty-cart" onClick={emptyCart}>
           Empty Cart
         </button>
       </div>
     </div>
   );
 };
+
+export default CartItems;
