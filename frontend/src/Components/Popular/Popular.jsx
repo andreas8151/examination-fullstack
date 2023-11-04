@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./popular.css";
-import { data_products } from "../Assets/data.js";
+import { ShopContext } from "../../Context/ShopContext";
 import popular from "../Assets/popular.jpg";
 import { Item } from "../Item/Item.jsx";
 
 export const Popular = () => {
+  const { all_data } = useContext(ShopContext);
+
   return (
     <div className="popular">
       <img src={popular} alt="" className="popular-img" />
 
       <div className="popular-items">
-        {data_products.map((item) => (
+        {all_data.map((item) => (
           <Item
             key={item.id}
             id={item.id}
