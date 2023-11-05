@@ -6,6 +6,13 @@ export async function deleteProduct(index) {
         "Content-Type": "application/json",
       },
     });
+
+    if (data.ok) {
+      return "Product deleted successfully!";
+    } else {
+      const errorMessage = await data.text();
+      return errorMessage;
+    }
   } catch (error) {
     return error;
   }

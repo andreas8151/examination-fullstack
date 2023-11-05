@@ -33,12 +33,7 @@ export const UpdateItem = (props) => {
 
     const response = await deleteProduct(props.product.id);
 
-    if (response === 200) {
-      setMessage("Deleted Successfully");
-      window.setTimeout(() => {
-        setMessage(null);
-      }, 2000);
-    }
+    setMessage(response);
   }
 
   const { product } = props;
