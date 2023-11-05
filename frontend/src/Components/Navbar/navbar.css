@@ -103,3 +103,21 @@ a {
     display: none;
   }
 }
+
+#signOutBtn {
+  background-color: #bd544b;
+  font-size: large;
+  color: white;
+  border: none;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+#signOutBtn:hover {
+  background-color: #a04a41;
+}
+
+#signOutBtn:active {
+  background-color: #bd544b;
+}
