@@ -36,23 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-#signOutBtn {
-  background-color: #bd544b;
-  font-size: large;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
-  margin-left: 40px;
-  margin-top: 20px;
-  cursor: pointer;
-}
-
-#signOutBtn:hover {
-  background-color: #a04a41;
-}
-
-#signOutBtn:active {
-  background-color: #bd544b;
-}
