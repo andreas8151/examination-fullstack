@@ -6,6 +6,14 @@ import logo from "../Assets/logo.png";
 import { ShopContext } from "../../Context/ShopContext";
 import { useContext } from "react";
 import { GrCart } from "react-icons/gr";
+import {
+  ClerkProvider,
+  SignedIn,
+  SignedOut,
+  RedirectToSignIn,
+  SignIn,
+  SignOutButton,
+} from "@clerk/clerk-react";
 
 export const Navbar = () => {
   const [menu, setMenu] = useState("Shop");
@@ -52,10 +60,14 @@ export const Navbar = () => {
         </li>
       </ul>
       <div className="nav-login">
-        <Link to="/login">
-          {" "}
-          <button>Login</button>
-        </Link>
+        <SignedIn>
+          <SignOutButton id="signOutBtn" />
+        </SignedIn>
+        <SignedOut>
+          <Link to="/login" className="nav-login-link">
+            <button className="nav-login-btn">Login</button>
+          </Link>
+        </SignedOut>
 
         <Link to="/cart" className="nav-cart">
           <GrCart />
