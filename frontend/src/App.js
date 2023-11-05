@@ -12,10 +12,20 @@ import woman_banner from "./Components/Assets/women.png";
 import kids_banner from "./Components/Assets/kids.png";
 import { Admin } from "./Pages/Admin";
 import { AdminUpdateItem } from "./Pages/AdminUpdateItem";
+import {
+  ClerkProvider,
+  SignedIn,
+  SignedOut,
+  RedirectToSignIn,
+  SignIn,
+  SignOutButton,
+} from "@clerk/clerk-react";
+
+const clerkPubKey = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY;
 
 function App() {
   return (
-    <div>
+    <ClerkProvider publishableKey={clerkPubKey}>
       <BrowserRouter>
         <Navbar />
         <Routes>
@@ -35,13 +45,55 @@ function App() {
           <Route path="/product" element={<Product />} />
           <Route path="/product/:productId" element={<Product />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/login" element={<LoginSignup />} />
-          <Route path="/admin" element={<Admin />} />
-          <Route path="/admin/:productId" element={<AdminUpdateItem />} />
+
+          <Route
+            path="/login"
+            element={
+              <>
+                {" "}
+                <SignedIn>
+                  <SignOutButton id="signOutBtn" />
+                  <Admin />
+                </SignedIn>
+                <SignedOut>
+                  <RedirectToSignIn />
+                </SignedOut>
+              </>
+            }
+          />
+          <Route
+            path="/admin/:productId"
+            element={
+              <>
+                {" "}
+                <SignedIn>
+                  <AdminUpdateItem />
+                </SignedIn>
+                <SignedOut>
+                  <RedirectToSignIn />
+                </SignedOut>
+              </>
+            }
+          />
+          <Route
+            path="/sign-up"
+            element={
+              <>
+                <SignedIn>
+                  <Admin />
+                </SignedIn>
+                <SignedOut>
+                  <RedirectToSignIn />
+                </SignedOut>
+              </>
+            }
+          />
         </Routes>
       </BrowserRouter>
-      <Footer />
-    </div>
+      <SignedOut>
+        <Footer />
+      </SignedOut>
+    </ClerkProvider>
   );
 }
 
