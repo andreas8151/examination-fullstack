@@ -5,7 +5,6 @@ import { Shop } from "./Pages/Shop";
 import { ShopCategory } from "./Pages/ShopCategory";
 import { Product } from "./Pages/Product";
 import { Cart } from "./Pages/Cart";
-import { LoginSignup } from "./Pages/LoginSignup";
 import { Footer } from "./Components/Footer/Footer";
 import men_banner from "./Components/Assets/men.png";
 import woman_banner from "./Components/Assets/women.png";
@@ -52,7 +51,6 @@ function App() {
               <>
                 {" "}
                 <SignedIn>
-                  <SignOutButton id="signOutBtn" />
                   <Admin />
                 </SignedIn>
                 <SignedOut>
