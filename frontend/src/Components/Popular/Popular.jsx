@@ -8,10 +8,10 @@ export const Popular = () => {
   const { all_data } = useContext(ShopContext);
 
   return (
-    <div className="popular">
-      <img src={popular} alt="" className="popular-img" />
+    <div id="popular">
+      <img src={popular} alt="" id="popular-img" />
 
-      <div className="popular-items">
+      <div id="popular-items">
         {all_data.map((item) => (
           <Item
             key={item.id}

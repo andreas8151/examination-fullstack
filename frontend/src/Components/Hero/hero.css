@@ -1,4 +1,4 @@
-.hero {
+#hero {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,13 +6,13 @@
   position: relative;
 }
 
-.hero-img {
+#hero-img {
   width: 100%;
   height: 70vh;
   object-fit: cover;
 }
 
-.hero button {
+#hero button {
   position: absolute;
   top: 40%;
   left: 30%;
@@ -28,16 +28,16 @@
   box-shadow: 0 0 20px rgb(255, 255, 255);
 }
 
-.hero button:hover {
+#hero button:hover {
   transform: translate(-50%, -50%) scale(1.1);
 }
 
 @media screen and (max-width: 768px) {
-  .hero-img {
+  #hero-img {
     height: 30vh;
   }
 
-  .hero button {
+  #hero button {
     padding: 15px 30px;
     font-size: 20px;
     top: 50%;

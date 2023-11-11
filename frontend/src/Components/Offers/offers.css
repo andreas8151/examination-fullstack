@@ -1,4 +1,4 @@
-.offers {
+#offers {
   background: linear-gradient(
     to right,
     rgba(218, 19, 19, 0.5),
@@ -17,14 +17,14 @@
   border-radius: 10px;
 }
 
-.offers img {
+#offers img {
   width: 30vh;
   height: 30vh;
 
   object-fit: cover;
 }
 
-.offers button {
+#offers button {
   background-color: #e54343;
   color: #fff;
   border: none;

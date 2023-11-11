@@ -21,8 +21,8 @@ export const Navbar = () => {
   const { getTotalItemsCount } = useContext(ShopContext);
 
   return (
-    <div className="navbar">
-      <ul className="nav-menu">
+    <div id="navbar">
+      <ul id="nav-menu">
         <li>
           <img src={logo} alt="logo" />
         </li>
@@ -59,20 +59,20 @@ export const Navbar = () => {
           {menu === "Kids" ? <hr /> : <></>}{" "}
         </li>
       </ul>
-      <div className="nav-login">
+      <div id="nav-login">
         <SignedIn>
           <SignOutButton id="signOutBtn" />
         </SignedIn>
         <SignedOut>
-          <Link to="/login" className="nav-login-link">
-            <button className="nav-login-btn">Login</button>
+          <Link to="/login" id="nav-login-link">
+            <button id="nav-login-btn">Login</button>
           </Link>
         </SignedOut>
 
-        <Link to="/cart" className="nav-cart">
+        <Link to="/cart" id="nav-cart">
           <GrCart />
         </Link>
-        <div className="nav-cart-count">{getTotalItemsCount()}</div>
+        <div id="nav-cart-count">{getTotalItemsCount()}</div>
       </div>
     </div>
   );

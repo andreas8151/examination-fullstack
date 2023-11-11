@@ -11,10 +11,10 @@ export const RelatedProducts = (props) => {
     .filter((item) => item.category === category.category)
     .slice(0, 4);
   return (
-    <div className="relatedProducts">
+    <div id="relatedProducts">
       <h1>RELATED PRODUCTS</h1>
       <hr />
-      <div className="relatedProducts-items">
+      <div id="relatedProducts-items">
         {filtered_products.map((product) => {
           return (
             <Item

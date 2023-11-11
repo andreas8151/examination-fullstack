@@ -1,4 +1,4 @@
-.productInputs {
+#productInputs {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -13,7 +13,7 @@
   border-radius: 5px;
 }
 
-.productInputs input {
+#productInputs input {
   width: 100%;
   margin: 5px;
   padding: 4px;
@@ -25,7 +25,7 @@
   border-radius: 5px;
 }
 
-.productInputs button {
+#productInputs button {
   background-color: rgb(54, 147, 58);
   color: rgb(255, 255, 255);
   border-radius: 5px;

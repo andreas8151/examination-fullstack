@@ -4,7 +4,7 @@ import sale from "../Assets/sale.png";
 
 export const Offers = () => {
   return (
-    <div className="offers">
+    <div id="offers">
       <div>
         <img src={sale} alt="" />
       </div>

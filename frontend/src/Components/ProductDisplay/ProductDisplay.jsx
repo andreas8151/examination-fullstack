@@ -7,16 +7,16 @@ export const ProductDisplay = (props) => {
   const { addToCart } = useContext(ShopContext);
 
   return (
-    <div className="productDisplay">
-      <div className="productDisplay-img">
-        <img src={product.image} alt="" className="productDisplay-main-image" />
+    <div id="productDisplay">
+      <div id="productDisplay-img">
+        <img src={product.image} alt="" id="productDisplay-main-image" />
       </div>
-      <div className="productDisplay-info">
+      <div id="productDisplay-info">
         <h1>{product.name}</h1>
         <p>$ {product.price}</p>
         <p>{product.description}</p>
         <button
-          className="productDisplay-button"
+          id="productDisplay-button"
           onClick={() => {
             addToCart(product.id);
           }}

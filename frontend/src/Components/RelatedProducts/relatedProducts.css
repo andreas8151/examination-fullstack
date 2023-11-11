@@ -13,7 +13,7 @@
   font-weight: 300;
 }
 
-.relatedProducts hr {
+#relatedProducts hr {
   margin: 20px 0;
   width: 190px;
   height: 2px;
@@ -21,7 +21,7 @@
   background-color: black;
 }
 
-.relatedProducts-items {
+#relatedProducts-items {
   padding: 20px;
 
   display: flex;

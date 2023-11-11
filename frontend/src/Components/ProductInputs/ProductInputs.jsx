@@ -3,7 +3,7 @@ import "./productInputs.css";
 
 export const ProductInputs = (props) => {
   return (
-    <div className="productInputs">
+    <div id="productInputs">
       <form onSubmit={props.submitHandler}>
         <input
           type="text"

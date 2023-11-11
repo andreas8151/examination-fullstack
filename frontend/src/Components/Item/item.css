@@ -1,4 +1,4 @@
-.item {
+#item {
   display: flex;
   flex-direction: column;
   width: 200px;
@@ -7,19 +7,19 @@
   border-radius: 5px;
 }
 
-.item:hover {
+#item:hover {
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
 
-.item:active {
+#item:active {
   transform: scale(0.98);
 }
 
-.item .description {
+#item .description {
   padding: 0 10px;
 }
 
-.item img {
+#item img {
   height: 300px;
   width: 200px;
   object-fit: cover;

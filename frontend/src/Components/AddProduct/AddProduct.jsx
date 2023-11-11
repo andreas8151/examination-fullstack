@@ -26,7 +26,7 @@ export const AddProduct = () => {
   }
 
   return (
-    <div className="add-product-container">
+    <div id="add-product-container">
       <h1>Add Product</h1>
 
       <form

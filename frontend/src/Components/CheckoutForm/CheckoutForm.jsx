@@ -54,7 +54,7 @@ export const CheckoutForm = ({ cart, all_data }) => {
   };
 
   return (
-    <div className="card-checkout">
+    <div id="card-checkout">
       <h2>Checkout</h2>
 
       <form onSubmit={handleSubmit}>
@@ -113,11 +113,11 @@ export const CheckoutForm = ({ cart, all_data }) => {
         <label htmlFor="price">Total Price:</label>
         <input type="text" id="price" name="price" value={price.toFixed(2)} />
 
-        <button type="submit" className="checkout-button">
+        <button type="submit" id="checkout-button">
           Submit
         </button>
       </form>
-      {message && <p className="message">{message}</p>}
+      {message && <p id="message">{message}</p>}
     </div>
   );
 };

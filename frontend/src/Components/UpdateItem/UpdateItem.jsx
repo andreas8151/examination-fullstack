@@ -39,11 +39,11 @@ export const UpdateItem = (props) => {
   const { product } = props;
 
   return (
-    <div className="productDisplay">
-      <div className="productDisplay-img">
-        <img src={product.image} alt="" className="productDisplay-main-image" />
+    <div id="productDisplay">
+      <div id="productDisplay-img">
+        <img src={product.image} alt="" id="productDisplay-main-image" />
       </div>
-      <div className="productDisplay-info">
+      <div id="productDisplay-info">
         <h1>{product.name}</h1>
         <p>$ {product.price}</p>
         <p>{product.description}</p>
@@ -58,10 +58,10 @@ export const UpdateItem = (props) => {
           setDescription={setDescription}
           submitHandler={submitHandler}
         />
-        <button onClick={deleteHandler} className="delete-btn">
+        <button onClick={deleteHandler} id="delete-btn">
           Delete
         </button>
-        {message && <div className="productDisplay-message">{message}</div>}
+        {message && <div id="productDisplay-message">{message}</div>}
       </div>
     </div>
   );

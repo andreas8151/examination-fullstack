@@ -15,8 +15,8 @@ export const CartItems = ({
   }
 
   return (
-    <div className="cartItems-container">
-      <div className="cartItems-header">
+    <div id="cartItems-container">
+      <div id="cartItems-header">
         <h3>Cart Items</h3>
         <p>Products</p>
         <p>Price</p>
@@ -27,24 +27,24 @@ export const CartItems = ({
       {all_data.map((product) => {
         if (cart[product.id] > 0) {
           return (
-            <div className="cartItems">
+            <div id="cartItems">
               {" "}
-              <div className="cartItems-info">
+              <div id="cartItems-info">
                 <img src={product.image} alt={product.name} />
                 <p>{product.name}</p>
                 <p>${product.price}</p>
                 <p>${(cart[product.id] * product.price).toFixed(2)}</p>
 
-                <div className="cartItems-quantity">
+                <div id="cartItems-quantity">
                   <button
-                    className="add-item"
+                    id="add-item"
                     onClick={() => addToCart(product.id)}
                   >
                     +
                   </button>
                   <p>{cart[product.id]}</p>
                   <button
-                    className="remove-item"
+                    id="remove-item"
                     onClick={() => removeFromCart(product.id)}
                   >
                     -
@@ -57,9 +57,9 @@ export const CartItems = ({
         return null;
       })}
 
-      <div className="cartItems-total">
+      <div id="cartItems-total">
         <h3>Total: ${total.toFixed(2)}</h3>
-        <button className="empty-cart" onClick={emptyCart}>
+        <button id="empty-cart" onClick={emptyCart}>
           Empty Cart
         </button>
       </div>

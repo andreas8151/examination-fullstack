@@ -15,7 +15,7 @@ export const AllOrders = () => {
   }, []);
 
   return (
-    <div className="order-container">
+    <div id="order-container">
       <h1>All Orders</h1>
       {allOrders &&
         allOrders.map((order) => {

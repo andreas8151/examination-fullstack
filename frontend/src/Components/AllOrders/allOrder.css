@@ -1,4 +1,4 @@
-.order-container {
+#order-container {
   display: flex;
   flex-direction: column;
   background-color: antiquewhite;
@@ -11,7 +11,7 @@
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
 
-.order-container button {
+#order-container button {
   background-color: #000000;
   color: #fff;
   border: none;
@@ -24,6 +24,6 @@
   transition: all 0.2s ease-in-out;
 }
 
-.order-container button:hover {
+#order-container button:hover {
   background-color: #1a1a1ac6;
 }

@@ -5,7 +5,7 @@
   justify-content: center;
 }
 
-.popular-img {
+#popular-img {
   height: 100px;
   width: 300px;
   margin: 20px 0 0 0;
@@ -13,7 +13,7 @@
   object-fit: cover;
 }
 
-.popular-items {
+#popular-items {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

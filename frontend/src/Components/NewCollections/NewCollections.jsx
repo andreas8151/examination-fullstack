@@ -7,10 +7,10 @@ export const NewCollections = () => {
   const { all_data } = useContext(ShopContext);
 
   return (
-    <div className="new-collections" id="new-collections">
+    <div id="new-collections">
       <h1>NEW COLLECTION</h1>
       <hr />
-      <div className="new-collections-items">
+      <div id="new-collections-items">
         {all_data.map((product) => {
           return (
             <Item

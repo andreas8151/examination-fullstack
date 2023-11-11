@@ -1,11 +1,11 @@
-.new-collections {
+#new-collections {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.new-collections-items {
+#new-collections-items {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -13,7 +13,7 @@
   background-color: #ffffff4b;
 }
 
-.new-collections-item {
+#new-collections-item {
   display: flex;
   flex-direction: column;
   width: 200px;
@@ -21,10 +21,10 @@
   border-radius: 5px;
 }
 
-.new-collections-item:hover {
+#new-collections-item:hover {
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
 
-.new-collections-item:active {
+#new-collections-item:active {
   transform: scale(0.98);
 }

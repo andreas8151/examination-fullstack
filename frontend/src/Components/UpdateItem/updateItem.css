@@ -1,4 +1,4 @@
-.delete-btn {
+#delete-btn {
   float: right;
   margin-right: 1rem;
   margin-top: 0.5rem;
@@ -14,6 +14,6 @@
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
-.delete-btn:hover {
+#delete-btn:hover {
   background-color: #b74d4d;
 }
