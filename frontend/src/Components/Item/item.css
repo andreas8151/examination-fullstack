@@ -15,7 +15,7 @@
   transform: scale(0.98);
 }
 
-#item .description {
+#item #description {
   padding: 0 10px;
 }
 

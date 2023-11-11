@@ -1,4 +1,4 @@
-.relatedProducts {
+#relatedProducts {
   padding: 20px;
 
   display: flex;
@@ -9,7 +9,7 @@
   background-color: #ffffff4b;
 }
 
-.relatedProducts h1 {
+#relatedProducts h1 {
   font-weight: 300;
 }
 

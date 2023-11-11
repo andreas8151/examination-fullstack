@@ -16,7 +16,7 @@
   object-fit: cover;
 }
 
-#cartItems .remove-item {
+#cartItems #remove-item {
   width: 30px;
   height: 30px;
   border: none;
@@ -28,16 +28,16 @@
   transition: all 0.2s ease-in-out;
 }
 
-#cartItems .remove-item:hover {
+#cartItems #remove-item:hover {
   transform: scale(1.1);
   background-color: #e03a3a;
 }
 
-#cartItems .remove-item:focus {
+#cartItems #remove-item:focus {
   transform: scale(1);
 }
 
-#cartItems .add-item {
+#cartItems #add-item {
   width: 30px;
   height: 30px;
   border: none;
@@ -49,12 +49,12 @@
   transition: all 0.2s ease-in-out;
 }
 
-#cartItems .add-item:hover {
+#cartItems #add-item:hover {
   transform: scale(1.1);
   background-color: #177255;
 }
 
-#cartItems .add-item:focus {
+#cartItems #add-item:focus {
   transform: scale(1);
 }
 

@@ -5,6 +5,15 @@
   margin: 4rem 0 4rem 0;
 }
 
+#productDisplay-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 50px 0 0;
+  width: 500px;
+}
+
 #productDisplay img {
   height: 500px;
   margin-right: 50px;
