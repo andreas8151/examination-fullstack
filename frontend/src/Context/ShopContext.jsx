@@ -8,9 +8,16 @@ export const ShopContextProvider = (props) => {
 
   useEffect(() => {
     async function getAllData() {
-      let response = await fetch("http://localhost:5050/product/");
-      let data = await response.json();
-      setAllData(data);
+      try {
+        let response = await fetch("http://localhost:5050/product/");
+        if (!response.ok) {
+          throw new Error("Failed to fetch data");
+        }
+        let data = await response.json();
+        setAllData(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
     }
     getAllData();
   }, []);
@@ -38,7 +45,6 @@ export const ShopContextProvider = (props) => {
   };
 
   const addToCart = (id) => {
-    console.log(cart);
     setCart((prev) => {
       return { ...prev, [id]: prev[id] + 1 };
     });
