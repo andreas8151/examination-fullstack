@@ -31,3 +31,17 @@
 
   background-color: #ffffff4b;
 }
+
+@media screen and (max-width: 768px) {
+  #relatedProducts-items {
+    padding: 0;
+  }
+
+  #relatedProducts-items img {
+    width: 100%;
+  }
+
+  #relatedProducts h1 {
+    font-size: 1.5rem;
+  }
+}

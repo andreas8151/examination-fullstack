@@ -31,4 +31,33 @@
   border-radius: 30px;
 
   padding: 10px 45px;
+
+  font-size: large;
+}
+
+#offers button:hover {
+  background-color: #e54343b3;
+}
+
+#offers button:active {
+  background-color: #e54343;
+}
+
+#offers button:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 768px) {
+  #offers img {
+    width: 48vh;
+    height: 40vh;
+  }
+
+  #offers button {
+    padding: 20px 50px;
+  }
+
+  #offers {
+    margin: 20px;
+  }
 }

@@ -26,4 +26,12 @@
 }
 
 @media screen and (max-width: 768px) {
+  #item {
+    width: 300px;
+  }
+
+  #item img {
+    height: 400px;
+    width: 300px;
+  }
 }
