@@ -1,9 +1,9 @@
 const pool = require("../../server");
 
 function getOrders(req, res) {
-  const sql = "SELECT * FROM orders";
+  const orderedSql = "SELECT * FROM orders ORDER BY status ASC, date DESC";
 
-  pool.execute(sql, (err, result) => {
+  pool.execute(orderedSql, (err, result) => {
     if (err) {
       res.status(500).send("Error in server" + err);
       return;
