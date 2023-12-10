@@ -1,53 +1,66 @@
-import React from "react";
-import { getAllOrders } from "./getAllOrder";
-import { useState, useEffect } from "react";
-import "./allOrder.css";
+import React, { useEffect, useState } from "react";
+import { getAllOrders } from "./getAllOrders";
+import { patchOrderStatus } from "./patchOrderStatus";
+import "./allOrders.css";
 
 export const AllOrders = () => {
-  const [allOrders, setAllOrders] = useState("");
+  const [allOrders, setAllOrders] = useState([]);
 
   useEffect(() => {
-    async function orders() {
+    async function fetchOrders() {
       let response = await getAllOrders();
       setAllOrders(response);
     }
-    orders();
+    fetchOrders();
   }, []);
+
+  const handleButtonClick = async (orderId, orderIndex) => {
+    await patchOrderStatus(orderId);
+
+    // Update the status for the specific order
+    setAllOrders((prevOrders) => {
+      const updatedOrders = [...prevOrders];
+      updatedOrders[orderIndex].status = 1 - updatedOrders[orderIndex].status; // Toggle between 0 and 1
+      return updatedOrders;
+    });
+  };
 
   return (
     <div id="order-container">
       <h1>All Orders</h1>
       {allOrders &&
-        allOrders.map((order) => {
-          return (
-            <div className="order-card">
-              <hr />
-
-              <h3>name: {order.name}</h3>
-              <p>
-                <strong>email: </strong>
-                {order.email}
-              </p>
-              <p>
-                <strong>address:</strong> {order.address}
-              </p>
-              <p>
-                <strong>phone: </strong>
-                {order.phone}
-              </p>
-              <p>
-                <strong>products:</strong> {order.products}
-              </p>
-              <p>
-                <strong>total:</strong> ${order.price}
-              </p>
-              <p>
-                <strong>order-date:</strong> {order.date}
-              </p>
-              <button>Paid</button>
-            </div>
-          );
-        })}
+        allOrders.map((order, index) => (
+          <div className="order-card" key={order.id}>
+            <hr />
+            <h3>name: {order.name}</h3>
+            <p>
+              <strong>email: </strong>
+              {order.email}
+            </p>
+            <p>
+              <strong>address:</strong> {order.address}
+            </p>
+            <p>
+              <strong>phone: </strong>
+              {order.phone}
+            </p>
+            <p>
+              <strong>products:</strong> {order.products}
+            </p>
+            <p>
+              <strong>total:</strong> ${order.price}
+            </p>
+            <p>
+              <strong>order-date:</strong> {order.date}
+            </p>
+            <button
+              style={{ background: order.status === 1 ? "none" : "salmon" }}
+              onClick={() => handleButtonClick(order.id, index)}
+            >
+              {order.status === 1 ? "✅" : "Mark as Paid"}
+            </button>
+          </div>
+        ))}
     </div>
   );
 };
