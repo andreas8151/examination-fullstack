@@ -3,7 +3,8 @@ const pool = require("../../server");
 function statusOrder(req, res) {
   const { id } = req.params;
 
-  const sql = "UPDATE orders SET status = 1 WHERE id = ?";
+  const sql =
+    "UPDATE orders SET status = CASE WHEN status = 1 THEN 0 ELSE 1 END WHERE id = ?";
 
   pool.execute(sql, [id], (err, result) => {
     if (err) {
