@@ -17,10 +17,9 @@ export const AllOrders = () => {
   const handleButtonClick = async (orderId, orderIndex) => {
     await patchOrderStatus(orderId);
 
-    // Update the status for the specific order
     setAllOrders((prevOrders) => {
       const updatedOrders = [...prevOrders];
-      updatedOrders[orderIndex].status = 1 - updatedOrders[orderIndex].status; // Toggle between 0 and 1
+      updatedOrders[orderIndex].status = 1 - updatedOrders[orderIndex].status;
       return updatedOrders;
     });
   };
